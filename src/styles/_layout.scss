@@ -1,0 +1,43 @@
+#full-page-wrapper {
+  flex: 1;
+  min-height: 100vh;
+  width: 100%;
+
+  &.space-between {
+    @include flex-container(column, space-between, center);
+  }
+
+  &.centered {
+    @include flex-container(column, center, center);
+  }
+}
+
+.content-wrapper {
+  @include respond-to('big') {
+    width: 1000px;
+  }
+
+  @include respond-to('medium') {
+    width: 768px;
+  }
+
+  @include respond-to('small') {
+    width: 100%;
+  }
+
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  transition: width 500ms;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.legal-information {
+  font-size: 12px;
+  margin: 0;
+  padding: 0 0 10px;
+  text-align: center;
+}
