@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>{{title}}</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="css/tabzilla.css" media="screen" />
   </head>
   <body>
     <header class="blue">
       <div id="main-header" class="content-wrapper">
-        
+
         <h1>
           <span class="firefox-logo"></span>
           <span>Firefox</span>
@@ -27,7 +26,7 @@
       <div class="details-header content-wrapper">
         <h1 data-hook="title">{{title}}</h1>
         <div class="experiment-controls">
-          <a class="button primary large" href={{& xpi}}>Enable {{title}}</a>
+          <a class="button primary large" href={{& xpi}}>{{ &buttonText}}</a>
         </div>
       </div>
     </div>
