@@ -1,49 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="css/tabzilla.css" media="screen" />
-  </head>
+  <html xmlns="http://www.w3.org/1999/xhtml hasBrowserHandlers="true">
+    <head>
+      <meta charset="utf-8" />
+      <title>{{title}}</title>
+      <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    </head>
   <body>
-    <header class="blue">
-      <div id="main-header" class="content-wrapper">
-        
-        <h1>
-          <span class="firefox-logo"></span>
-          <span>Firefox</span>
-        </h1>
-
-        <div id="tabzilla">
-            <a href="https://www.mozilla.org/">Mozilla</a>
+      <div class="container">
+        <div class="title-container">
+          <h1 class="title">{{title}}</h1>
+          <button class="button primary">Enable {{title}}</button>
         </div>
-
-      </div>
-    </header>
-
-    <div class="spacer"></div>
-    <div class="details-header-wrapper">
-      <div class="details-header content-wrapper">
-        <h1 data-hook="title">{{title}}</h1>
-        <div class="experiment-controls">
-          <a class="button primary large" href={{& xpi}}>Enable {{title}}</a>
-        </div>
-      </div>
+        <div class="content">{{> ./../../compile/copy }}</div>
     </div>
-
-    <div class="content-wrapper">
-
-      {{> ./../../compile/copy }}
-    </div>
-
-    <footer id="main-footer" class="content-wrapper">
-      <div id="footer-links">
-      <a data-l10n-id="footerLinkLegal" href="https://www.mozilla.org/about/legal/" class="boilerplate">Legal</a>
-      <a data-l10n-id="footerLinkPrivacy" href="https://www.mozilla.org/privacy/" class="boilerplate">Privacy</a>
-      <a data-l10n-id="footerLinkCookies" href="https://www.mozilla.org/privacy/websites/#cookies" class="boilerplate">Cookies</a>
-      <a data-l10n-id="footerLinkContribute" href="https://www.mozilla.org/contribute/signup/" class="boilerplate">Contribute</a>
-      </div>
-    </footer>
   </body>
 </html>

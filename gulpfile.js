@@ -1,25 +1,18 @@
-const autoprefixer = require('gulp-autoprefixer');
+
 const del = require('delete');
 const gulp = require('gulp');
 const livereload = require('gulp-livereload');
 const markdown = require('gulp-markdown');
 const mustache = require('gulp-mustache');
-const normalize = require('node-normalize-scss');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const tabzilla = require('mozilla-tabzilla');
 const webserver = require('gulp-webserver');
 const runSequence = require('run-sequence');
 
 const DATA = require('./data');
 
 gulp.task('styles', function () {
-  return gulp.src('./src/styles/main.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: [normalize.includePaths, tabzilla.includePaths] }).on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+  return gulp.src('./src/styles/main.css')
     .pipe(sourcemaps.write({ sourceRoot: 'src/styles' }))
     .pipe(gulp.dest('./dist/styles'))
     .pipe(livereload());
@@ -47,16 +40,10 @@ gulp.task('markdown', function () {
     .pipe(gulp.dest('./compile'));
 });
 
-gulp.task('tabzilla', function () {
-  return gulp.src('./node_modules/mozilla-tabzilla/media/**')
-  .pipe(gulp.dest('./dist/media/'));
-});
-
 gulp.task('move:images', function () {
   gulp.src('./src/images/**')
   .pipe(gulp.dest('./dist/images'));
 });
-
 
 gulp.task('compile-markdown', ['markdown', 'rename']);
 
@@ -64,7 +51,6 @@ gulp.task('build', function () {
   runSequence('compile-markdown',
               'move:images',
               'styles',
-              'tabzilla',
               'compile-mustache');
 });
 
@@ -81,7 +67,7 @@ gulp.task('delete', function () {
 
 gulp.task('default', ['build', 'server'], function () {
   livereload.listen();
-  gulp.watch('./src/styles/**/*.scss', ['styles']);
+  gulp.watch('./src/styles/**/*.css', ['styles']);
   gulp.watch('./src/**/*.mustache', ['compile-mustache']);
   gulp.watch('./dist/**').on('change', livereload.changed);
 });
