@@ -1,6 +1,6 @@
 {
   "name": "shield-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "devDependencies": {
@@ -26,12 +26,12 @@
     "run-sequence": "^1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./public/scripts/*.js",
+    "pretest": "npm run compile",
+    "test": "eslint data.js &&  node ./scripts/lintPage.js `pwd`/data.js",
     "compile": "gulp build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Gregg Lind <glind@mozilla.org>",
+  "license": "MPL-2",
   "dependencies": {
     "mozilla-tabzilla": "^0.5.1"
   }
