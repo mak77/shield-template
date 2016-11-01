@@ -2,3 +2,4 @@ node_modules
 src/*.html
 dist
 compile
+addons-server
