@@ -31,7 +31,11 @@
     "compile": "gulp build"
   },
   "author": "Gregg Lind <glind@mozilla.org>",
-  "license": "MPL-2",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregglind/shield-template.git"
+  },
   "dependencies": {
     "mozilla-tabzilla": "^0.5.1"
   }
