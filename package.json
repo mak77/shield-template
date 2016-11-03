@@ -1,10 +1,9 @@
 {
   "name": "shield-template",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "babel-eslint": "^5.0.0",
     "delete": "^0.3.0",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
