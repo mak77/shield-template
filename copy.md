@@ -17,7 +17,7 @@ Mozilla wants to know if we can improve the default search experience in Firefox
 The study will expire on its own in 30 days. You may leave the study early. To do so, follow these steps:
 
 1. Type about:addons into the location bar, and press enter.
-2. Find Unified Urlbar Shield Study in the addons list.
+2. Find Search Shield Study in the addons list.
 3. Click the remove button.
 4. If you opt out of the study early we will ask you to fill out a survey. We’re interested in hearing about your experience, even if you didn’t participate in the entire study.
 
