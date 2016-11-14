@@ -1,3 +1,4 @@
+
 # Optimizing Firefox Search
 
 Mozilla wants to know if we can improve the default search experience in Firefox. Participating in this study will help us find out!
@@ -8,12 +9,12 @@ Mozilla wants to know if we can improve the default search experience in Firefox
 
 1. We will add additional features to Firefox that modify the default search experience
 2. Continue using Firefox as you normally would. You may not notice any changes immediately.
-3. After 14 days, the study will end on its own. Your Firefox will go back to normal.
+3. After 30 days, the study will end on its own. Your Firefox will go back to normal.
 4. We will ask you to fill out a quick optional survey to tell us about your experience. The survey should take less than 5 minutes to complete.
 
 ## Leaving the study
 
-The study will expire on its own in 14 days. You may leave the study early. To do so, follow these steps:
+The study will expire on its own in 30 days. You may leave the study early. To do so, follow these steps:
 
 1. Type about:addons into the location bar, and press enter.
 2. Find Unified Urlbar Shield Study in the addons list.
