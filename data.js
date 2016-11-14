@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Unified URL Bar',
+  title: 'Search Shield Study',
   xpi: 'https://addons.mozilla.org/firefox/downloads/latest/unified-urlbar-shield-study/?src=shield-study-8',
-  buttonText: 'Try Unified URL Bar'
+  buttonText: 'Try Search Shield Study'
 };
